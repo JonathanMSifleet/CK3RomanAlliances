@@ -1,0 +1,38 @@
+create_alliance_with_wre = {
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	confirm_text = ra_decision_confirm
+	cooldown = {
+		days = 1
+	}
+	desc = ra_decision_desc
+	effect = {
+		defensive_negotiations_perk_effect = yes
+		create_alliance = title:e_western_roman_empire.holder
+	}
+	is_shown = {
+		AND = {
+			has_title = title:e_byzantium
+			holder = {
+				NOT = { has_alliance_with = title:e_western_roman_empire }
+			}
+		}
+	}
+	is_valid = {
+		AND = {
+			has_title = title:e_byzantium
+			holder = {
+				NOT = { has_alliance_with = title:e_western_roman_empire }
+			}
+		}
+	}
+	major = yes
+	picture = "gfx/interface/illustrations/decisions/ra_icon.dds"
+	selection_tooltip = ra_decision_tooltip
+	title = ra_decision_title
+}
